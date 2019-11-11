@@ -1,0 +1,302 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  overflow: auto;
+}
+
+footer {
+  display: block;
+  margin: 80px 40px 80px 40px;
+}
+
+
+#container {
+  width: 70%;
+  height: auto;
+  background-color: transparent; 
+  margin: 0 auto;
+ }
+
+ a.skiplink{
+  position: relative;
+  top: -80px;
+  z-index: 1;
+  transition: top ease-in 0.3s;
+}
+
+a.skiplink:focus, a.skiplink:active{
+  display: inline;
+  top: 0px;
+}
+
+
+.menu ul {
+  display:inline-flex;
+  margin:50px;
+ }
+
+.menu ul li {
+  list-style: none;
+  margin: 0 20px;
+  color: black;
+  cursor: pointer;
+}
+
+.followus-btn {
+  top: 40px;
+  right: 80px;
+  position: absolute;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(#42455a,#42455a),radial-gradient(circle at top left, #fd00da,#19d7f8);
+  background-origin: content-box;
+  background-clip: content_box,border-box;
+
+} 
+
+.followus-btn span {
+
+  display: block;
+  padding: 8px 22px;
+
+
+} 
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+    /* width: 80%;
+    height:70%;
+    top: 25%;
+    left: 130px;
+    position: absolute;
+    color: #fff; */
+
+  
+  
+  } 
+
+  .team-text {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  
+  }
+
+header{
+    /* background-attachment: fixed; */
+    text-align: center; 
+    /* background-position: center;  
+    background-repeat: no-repeat;
+    background-size: cover;        */
+    color:blue;
+    height: auto;        
+    width: 100%;       
+  
+  }
+
+
+
+  header p{
+    color:blue;
+    font-size: 24px;
+    padding: 0 100px;
+    text-align: center;
+  }
+  
+  
+  .team-text h1 {
+    font-size: 40px;
+    /* position: relative; */
+    /* margin-left: 40px; */
+    color: chocolate;
+  
+  } 
+
+  .team-text p {
+
+    /* width: 650px; */
+    margin: 20px;
+    font-size: 22px;
+    line-height: initial;
+    text-align: left;
+    /* margin: 30px 0 30px 40px; */
+    color: #919191;
+  
+  }  
+
+  .team-picture img {
+    width: 500px;
+    height: auto;
+    
+  }  
+
+.text-and-photo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text-and-photo2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: lemonchiffon;
+
+}
+
+.people-grid{
+  display:grid;
+  grid-template: repeat(2, 1fr) / 400px 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.people-grid img{
+  object-fit: cover;
+  width: 100%;
+}
+
+.people-text{
+  margin: 15px;
+  font-size: 18px;
+}
+
+.gallery{
+  display: grid;
+  grid-template: repeat(3, 300px) / repeat(3, 300px);
+  grid-gap: 20px;
+  /* grid-template: rows / columns */
+}
+
+.gallery img{
+  object-fit: cover;
+  width: 100%;
+}
+
+
+
+.animation {
+  font-family: Courier, monospace;
+  display: inline-block;
+}
+
+.animation-text {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2px;
+  animation: typing 10s steps(30, end), blink .75s step-end infinite;
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: 700;
+  border-right: 4px solid orange;
+  box-sizing: border-box;
+}
+
+@keyframes typing {
+  from { 
+      width: 0% 
+  }
+  to { 
+      width: 100% 
+  }
+}
+
+@keyframes blink {
+  from, to { 
+      border-color: transparent 
+  }
+  50% { 
+      border-color: orange; 
+  }
+}
+
+
+.form-wrap{ width: 320px; 
+  background: #3e3d3d;
+  padding: 40px 20px; 
+  box-sizing: border-box; 
+  position: fixed; 
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%, -50%);
+}
+        
+h1{
+  text-align: center; 
+  color: #fff; 
+  font-weight: normal; 
+  margin-bottom: 20px;
+}
+        
+  input{
+    width: 100%; 
+    background: none; 
+    border: 1px solid #fff; 
+    border-radius: 3px; 
+    padding: 6px 15px; 
+    box-sizing: border-box; 
+    margin-bottom: 20px; 
+    font-size: 20px; 
+    color: #fff;
+
+  } 
+
+/* iPad Media Query */
+/* Used speciically for tablet (portrait and landscape) dimensions */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .gallery{
+    grid-template: repeat(4, auto) / repeat(2, 400px);
+}
+
+ .people-grid{
+  grid-template: none;
+}
+
+}
+
+/* iPhone X Media Query */
+@media screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) {
+  .menu ul {
+  display:block;
+  margin:50px;
+ }
+
+ .people-grid{
+  grid-template: none;
+}
+
+.gallery{
+    grid-template: repeat(4, auto) / repeat(2, 400px);
+}
+
+footer{
+  margin: 0 auto;
+}
+
+footer p{
+  padding: 0;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  a.skiplink{
+    transition: none;
+  }
+
+}
+}
+
